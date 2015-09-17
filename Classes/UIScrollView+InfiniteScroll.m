@@ -460,7 +460,7 @@ static const void *kPBInfiniteScrollStateKey = &kPBInfiniteScrollStateKey;
     CGFloat contentHeight = [self pb_clampContentSizeToFitVisibleBounds:self.contentSize];
     
     // The lower bound when infinite scroll should kick in
-    CGFloat actionOffset = contentHeight - self.bounds.size.height + [self pb_originalBottomInset];
+    CGFloat actionOffset = contentHeight - 5 * self.bounds.size.height;
     
     // Disable infinite scroll when scroll view is empty
     // Default UITableView reports height = 1 on empty tables
